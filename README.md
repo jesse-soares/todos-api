@@ -24,26 +24,39 @@ After clonning project, run the following command to install the gems:
 
         $ bundle install
 
-### Database creation
+### Database
 
 Create the database:
 
         $ rails db:create
 
-Initialize database:
+Initialize and update database:
 
         $ rails db:migrate
 
-Initialize test database:
-
         $ rails db:migrate RAILS_ENV=test
 
-### Database initialization
 
-### How to run the test suite
+### Test suite
 
-### Services (job queues, cache servers, search engines, etc.)
+RSpec, FactoryGirl, Shoulda Matchers, Faker and Database Cleaner
 
-### Deployment instructions
+To run the test:
 
-* ...
+        $ rspec
+
+### API Endpoints
+
+| Endpoint                | Functionality                |
+|-------------------------|------------------------------|
+| POST /signup            | Signup                       |
+| POST /auth/login        | Login                        |
+| GET /auth/logout        | Logout                       |
+| GET /todos              | List all todos               |
+| POST /todos             | Create a new todo            |
+| GET /todos/:id          | Get a todo                   |
+| PUT /todos/:id          | Update a todo                |
+| DELETE /todos/:id       | Delete a todo and its items  |
+| GET /todos/:id/items    | Get a todo item              |
+| PUT /todos/:id/items    | Update a todo item           |
+| DELETE /todos/:id/items | Delete a todo item           |

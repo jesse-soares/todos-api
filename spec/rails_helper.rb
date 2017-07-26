@@ -6,12 +6,8 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require "rspec/rails"
 require "database_cleaner"
 
-# The following line is provided for convenience purposes. It has the downside
-# of increasing the boot-up time by auto-requiring all files in the support
-# directory. Alternatively, in the individual `*_spec.rb` files, manually
-# require only the support files necessary.
-#
-# Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+# Autoload support directory
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 # Checks for pending migration and applies them before tests are run.
 ActiveRecord::Migration.maintain_test_schema!
@@ -56,6 +52,8 @@ RSpec.configure do |config|
 
   # Add `FactoryGirl` methods
   config.include FactoryGirl::Syntax::Methods
+
+  config.include RequestSpecHelper, type: :request
 
   # Start by truncating all the tables but then use the faster transaction strategy
   # the rest of the time.
