@@ -26,6 +26,18 @@ After clonning project, run the following command to install the gems:
 
 ### Database creation
 
+Create the database:
+
+        $ rails db:create
+
+Initialize database:
+
+        $ rails db:migrate
+
+Initialize test database:
+
+        $ rails db:migrate RAILS_ENV=test
+
 ### Database initialization
 
 ### How to run the test suite
