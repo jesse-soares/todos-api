@@ -1,9 +1,8 @@
-# README
+# Todos List Rails API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Todo list application build as a RESTfull JSON API with Rails.
 
-Things you may want to cover:
+Tutorial by scotch.io [https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-one](https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-one)
 
 ### Dependencies
 
@@ -20,6 +19,10 @@ Things you may want to cover:
 Command used to create de project:
 
         $ rails new todos-api --api -T -d postgresql
+
+After clonning project, run the following command to install the gems:
+
+        $ bundle install
 
 ### Database creation
 
