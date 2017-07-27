@@ -39,7 +39,7 @@ Initialize and update database:
 
 ### Test suite
 
-RSpec, FactoryGirl, Shoulda Matchers, Faker and Database Cleaner
+Gems used: RSpec, FactoryGirl, Shoulda Matchers, Faker and Database Cleaner
 
 To run the test:
 

@@ -3,5 +3,6 @@ class Item < ApplicationRecord
   belongs_to :todo
 
   # validations
-  validates :name, :done, presence: true
+  validates :name, :todo, presence: true
+  validates :done, inclusion: [ true, false ]
 end
