@@ -8,6 +8,8 @@ end
 gem "rails", "~> 5.1.2"
 gem "pg", "~> 0.18"
 gem "puma", "~> 3.7"
+gem "bcrypt"
+gem "jwt" # Json Web Token - token based authentication
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
